@@ -6,11 +6,14 @@ public class main {
 
         System.out.print("Enter Biographic: ");
         String str = scan.nextLine(); // reads string
-        System.out.print("You have entered: " + str);
-        String isss_public = scan.nextLine(); // reads string
-        System.out.print("Set Biographic public or private: " + isss_public);
+        // System.out.print("You have entered: " + str);
 
-        // Biography bio = new Biography(str, str1); //create an instance of the class
+        System.out.print("\nSet Biographic public or private: ");
+        String isss_public = scan.nextLine(); // reads string
+
+        Biography bio = new Biography(str, isss_public); // create an instance of the class
+        // System.out.println("You have entered: " + isss_public);
+        System.out.println(bio.getBio());
     }
 
 }
