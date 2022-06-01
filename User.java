@@ -65,3 +65,33 @@ class Candid_User extends User
         System.out.println(bio.getis_Public());
     }
 }
+
+class Employer_user extends User{
+
+    public Employer_user(String username, String password, String email) {
+        super(username, password, email);
+    }
+
+    private String business_description;
+    private String fund_date;
+
+    //Setters
+    public void setBusiness_description(String business_description) {
+        this.business_description = business_description;
+    }
+
+    public void setFund_date(String fund_date) {
+        this.fund_date = fund_date;
+    }
+
+    //Getters
+    public String getBusiness_description() {
+        return business_description;
+    }
+    
+    public String getFund_date() {
+        return fund_date;
+    }
+
+    
+}
