@@ -15,14 +15,24 @@ public class User {
     }
 
     // Setter
-    public void setName(String newUsername, String newPassword, String newEmail, String profile_category) {
+    public void setName(String newUsername) {
         this.username = newUsername;
-        this.password = newPassword;
-        this.email = newEmail;
-        this.profile_category = profile_category;
+
     }
 
-    public void setName(String profile_category) {
+    public void setpasswrd(String newPassword) {
+
+        this.password = newPassword;
+
+    }
+
+    public void setemail(String newEmail) {
+
+        this.email = newEmail;
+
+    }
+
+    public void setprofile_category(String profile_category) {
         this.profile_category = profile_category;
         if (this.profile_category == "candidate") {
 

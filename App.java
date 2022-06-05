@@ -9,12 +9,13 @@ public class App {
         User user1 = new User("sdvv", "12345", "aser@gmail.com", "candidate");
         User user2 = new User("sdsw", "123456", "sdsw@gmail.com", "candidate");
         User user3 = new User("sdretv", "123457", "sdretvr@gmail.com", "employer");
-
+        
         String userprfl1 = user1.getprofile_category();
         String userprfl2 = user2.getprofile_category();
         String userprfl3 = user3.getprofile_category();
+        String userprfl1name = user1.setName(newUsername);
 
-        switch (userprfl2) {
+        switch (userprfl1) {
 
             case "candidate":
                 Scanner myObj = new Scanner(System.in); //
@@ -65,7 +66,7 @@ public class App {
                     int initmyphonenumber = myphonenumber.nextInt();
 
                     Candid_User candidUser = new Candid_User(initname, initlastname, initmyadress, initmybirthdate,
-                            initmynationality, initmyphonenumber, newUsername, ,, );
+                            initmynationality, initmyphonenumber, , ,, );
                     candidUser.Insert_name(initname);
                     candidUser.Insert_lastname(initlastname);
                     candidUser.Insert_adress(initmyadress);
