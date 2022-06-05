@@ -28,8 +28,7 @@ public class App {
                 Biography bio = new Biography(bio1, ispublic); // bio object for class Biography
                 // System.out.println(bio.getBio());
                 // System.out.println(bio.getis_public());
-                boolean ispublictrue = true;
-                boolean ispublicfalse = false;
+
                 boolean tr = bio.getis_public();
                 if (tr) {
                     System.out.println("Your bio is public\n");
@@ -43,7 +42,7 @@ public class App {
                 String comp_descr = scdescr.nextLine();
                 Company_description cmp_descr = new Company_description(comp_descr);
                 cmp_descr.setdescription(comp_descr);
-                System.out.println("The description" + cmp_descr.getdescription());
+                System.out.println("The description is :" + cmp_descr.getdescription());
                 break;
 
         }
