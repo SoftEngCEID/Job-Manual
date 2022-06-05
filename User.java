@@ -15,8 +15,8 @@ public class User {
     }
 
     // Setter
-    public void setName(String newUsername) {
-        this.username = newUsername;
+    public void setName(String newusername) {
+        this.username = newusername;
 
     }
 
@@ -42,6 +42,19 @@ public class User {
             System.out.println("There are only two categories.Please select ");
         }
 
+    }
+
+    public String getname() {
+        return username;
+
+    }
+
+    public String getpassword() {
+        return password;
+    }
+
+    public String getemail() {
+        return email;
     }
 
     public String getprofile_category() {
