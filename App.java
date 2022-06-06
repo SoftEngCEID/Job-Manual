@@ -1,14 +1,11 @@
 import java.util.Scanner;
 
 public class App {
-    public enum profile_category {
-        CANDIDATAE, EMPLOYER
-    }
 
     public static void main(String[] args) throws Exception {
-        User user1 = new User("sdvv", "12345", "aser@gmail.com", "candidate");
-        User user2 = new User("sdsw", "123456", "sdsw@gmail.com", "candidate");
-        User user3 = new User("sdretv", "123457", "sdretvr@gmail.com", "employer");
+        User user1 = new User("archodia", "12345", "@gmail.com", "candidate");
+        User user2 = new User("dennis", "123456", "dennis@gmail.com", "candidate");
+        User user3 = new User("dimitris", "123457", "dimitris@gmail.com", "employer");
 
         String userprfl1 = user1.getprofile_category();
         String userprfl2 = user2.getprofile_category();
@@ -99,26 +96,7 @@ public class App {
 
 /*
  * Scanner myuser = new Scanner(System.in);
- * 
  * System.out.println("choose ");
  * int choice = myuser.nextInt();
- * 
- * 
- * switch(choice) {
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * }
+ * switch(choice) { }
  */
