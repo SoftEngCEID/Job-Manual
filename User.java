@@ -1,15 +1,21 @@
 import java.util.Scanner;
+import java.util.Map;
+import java.util.Queue;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User
 {       
     private String username;
     private String password;
     private String email;
+    private String profile_category;
     
-    public User(String username, String password, String email) {
+    public User(String username, String password, String email, String profile_category) {
         this.username = username;
         this.password = password;
         this.email = email;
+        this.profile_category = profile_category; 
     }
 
     // Setter
@@ -22,8 +28,8 @@ public class User
 
 class Candid_User extends User
 {
-    public Candid_User(String username, String password, String email) {
-        super(username, password, email);
+    public Candid_User(String username, String password, String email, String profile_category) {
+        super(username, password, email, profile_category);
     }
 
     private String name, last_name, address, birth_date, nationality, phone_number;
@@ -68,8 +74,8 @@ class Candid_User extends User
 
 class Employer_user extends User{
 
-    public Employer_user(String username, String password, String email) {
-        super(username, password, email);
+    public Employer_user(String username, String password, String email, String profile_category) {
+        super(username, password, email, profile_category);
     }
 
     private String business_description;
@@ -92,6 +98,4 @@ class Employer_user extends User{
     public String getFund_date() {
         return fund_date;
     }
-
-    
 }
