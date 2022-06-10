@@ -30,11 +30,40 @@ public class Candid_list {
     }
 
     public void Get_Candidate_List(Map<String, Queue<String>> map, String job, Map<String, Queue<String>> accepted){
-        Scanner getObj = new Scanner(System.in);
-        System.out.println(map.get(job));
-        System.out.println("Επιλέξτε τον αιτούντα που επιθυμείτε:");
-        String choice = getObj.nextLine();
+        Main main = new Main();
+        Accept_list acceptlist = new Accept_list();
+        Candid_User user = new Candid_User();
+        user.Insert_data("Marios", "Karelis", "Karaiskaki 80", "18/10/2000", "Greek", "6957631801");
 
-        Insert_Candidate(choice, job, accepted);
+        Scanner getObj = new Scanner(System.in);
+        Queue candid_queue = map.get(job);
+        System.out.println(candid_queue);
+        System.out.println("Επιλέξτε τον αιτούντα που επιθυμείτε:");
+        String candid = getObj.nextLine();
+
+        int choice = 1;
+
+        while(choice==1){
+            System.out.println("\n1. Προβολή προφίλ\t" + "2. Ενδιαφέρομαι\n" + "3. Δεν ενδιαφέρομαι\t" + "4. Επιστροφή");
+            choice = getObj.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("\n" + user.Get_Data() + "\n");
+                    break;
+                case 2:
+                    acceptlist.Insert_ACandidate(candid, job, accepted);
+                    candid_queue.remove(candid);
+                    map.replace(job, candid_queue);
+                    main.setCandids(map);
+                    break;
+                case 3:
+                    candid_queue.remove(candid);
+                    map.replace(job, candid_queue);
+                    main.setCandids(map);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

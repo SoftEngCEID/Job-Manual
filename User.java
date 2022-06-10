@@ -11,6 +11,8 @@ public class User
     private String email;
     private String profile_category;
     
+    public User(){}
+    
     public User(String username, String password, String email, String profile_category) {
         this.username = username;
         this.password = password;
@@ -28,6 +30,10 @@ public class User
 
 class Candid_User extends User
 {
+    public Candid_User(){
+        super();
+    }
+
     public Candid_User(String username, String password, String email, String profile_category) {
         super(username, password, email, profile_category);
     }
