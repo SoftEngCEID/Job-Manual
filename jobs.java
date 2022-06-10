@@ -20,7 +20,7 @@ public class jobs {
         this.Description = Description;
     }
 
-    public Boolean getDescription() {
+    public String getDescription() {
         return Description;
     }
 
