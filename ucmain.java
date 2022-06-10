@@ -29,7 +29,7 @@ public class ucmain {
                             System.out.println(
                                     "Enter job description");
                             String myjobdescr = insertjobdescr.nextLine();
-                            jobs job1 = new jobs(myjobtitle, myjobdescr);
+                            jobs job1 = new jobs(myjobtitle, myjobdescr);// create object named job1 of class job
                             job1.setDescription(myjobdescr);
                             job1.setJob_title(myjobtitle);
                             jobs.put("myjobtitle", "myjobdescr");
@@ -43,6 +43,7 @@ public class ucmain {
                                             "Your plan is standard you can insert another job.Please update your plan");
                                     break;
                                 case "Premium":
+                                    // ???????????????
                                     break;
 
                             }
@@ -50,7 +51,12 @@ public class ucmain {
                         }
                         break;
                     case 2:
-                        jobs job1 = new jobs("Software Engineer Position", "HI, we looking for a java developer ");
+                        System.out.println("Choose your job you want to edit");
+                        HashMap<String, String> jobslist = new HashMap<String, String>();
+                        jobs job2 = new jobs("Software Engineer Position", "HI, we looking for a java developer ");
+                        jobslist.put("Software Engineer Position", "HI, we looking for a java developer ");
+                        System.out.println(jobslist);
+
                         break;
                     case 3:
 
