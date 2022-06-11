@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Candid_list {
     public void Insert_Candidate(String Candid_User, String job, Map<String, Queue<String>> accepted){
-        Main main = new Main();
-        Map<String, Queue<String>> candids = main.getCandids();
+        employer_usecases uc3 = new employer_usecases();
+        Map<String, Queue<String>> candids = uc3.getCandids();
 
         Scanner getObj = new Scanner(System.in);
         System.out.println("Αποδοχή του αιτούντα?");
@@ -22,7 +22,7 @@ public class Candid_list {
                     queue.add(Candid_User);
                     accepted.putIfAbsent(job, queue);
                 }
-                main.setAccepted(accepted);
+                uc3.setAccepted(accepted);
                 break;
             default:
                 break;
@@ -30,10 +30,16 @@ public class Candid_list {
     }
 
     public void Get_Candidate_List(Map<String, Queue<String>> map, String job, Map<String, Queue<String>> accepted){
-        Main main = new Main();
+        employer_usecases uc3 = new employer_usecases();
         Accept_list acceptlist = new Accept_list();
-        Candid_User user = new Candid_User();
-        user.Insert_data("Marios", "Karelis", "Karaiskaki 80", "18/10/2000", "Greek", "6957631801");
+        Candid_User user1 = new Candid_User();
+        Candid_User user2 = new Candid_User();
+        Candid_User user3 = new Candid_User();
+        Candid_User user4 = new Candid_User();
+        user1.Insert_data("Marios", "Karelis", "Karaiskaki 80", "18/10/2000", "Greek", "6957631801");
+        user2.Insert_data("Arho", "Giannopoulou", "Odos 1", "30/06/2000", "Greek", "1234567890");
+        user3.Insert_data("Dimitris", "Vasilakis", "Odos 23", "18/11/2000", "Greek", "1234567890");
+        user4.Insert_data("Dionisis", "Christod", "Odos 5", "30/05/2000", "Greek", "1234567890");
 
         Scanner getObj = new Scanner(System.in);
         Queue candid_queue = map.get(job);
@@ -48,18 +54,31 @@ public class Candid_list {
             choice = getObj.nextInt();
             switch(choice){
                 case 1:
-                    System.out.println("\n" + user.Get_Data() + "\n");
+                    switch(candid){
+                        case "Marios":
+                            System.out.println("\n" + user1.Get_Data() + "\n");
+                            break;
+                        case "Arho":
+                            System.out.println("\n" + user2.Get_Data() + "\n");
+                            break;
+                        case "Dimitris":
+                            System.out.println("\n" + user3.Get_Data() + "\n");
+                            break;
+                        case "Dionisis":
+                            System.out.println("\n" + user4.Get_Data() + "\n");
+                            break;
+                    }
                     break;
                 case 2:
                     acceptlist.Insert_ACandidate(candid, job, accepted);
                     candid_queue.remove(candid);
                     map.replace(job, candid_queue);
-                    main.setCandids(map);
+                    uc3.setCandids(map);
                     break;
                 case 3:
                     candid_queue.remove(candid);
                     map.replace(job, candid_queue);
-                    main.setCandids(map);
+                    uc3.setCandids(map);
                     break;
                 default:
                     break;

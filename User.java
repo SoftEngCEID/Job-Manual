@@ -1,9 +1,3 @@
-import java.util.Scanner;
-import java.util.Map;
-import java.util.Queue;
-import java.util.ArrayList;
-import java.util.List;
-
 public class User
 {       
     private String username;
@@ -19,12 +13,37 @@ public class User
         this.email = email;
         this.profile_category = profile_category; 
     }
+    
+    public String getUsername(){
+        return username;
+    }
 
-    // Setter
-    public void setName(String newUsername, String newPassword, String newEmail) {
-        this.username = newUsername;
-        this.password = newPassword;
-        this.email = newEmail;
+    public String getPassword(){
+        return password;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public String getProfile_category(){
+        return profile_category;
+    }
+
+    public void setUsername(String username){
+        this.username = username;
+    }
+    
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+    
+    public void setProfile_category(String profile_category){
+        this.profile_category = profile_category;
     }
 }
 
@@ -49,36 +68,41 @@ class Candid_User extends User
         this.phone_number = newPhone;
     }
 
+    public void Insert_name(String newName){
+        this.name = newName;
+    }
+
+    public void Insert_lastname(String newLast){
+        this.last_name = newLast;
+    }
+
+    public void Insert_adress(String newAdd){
+        this.address = newAdd;
+    }
+
+    public void Insert_newBirth(String newBirth){
+        this.birth_date = newBirth;
+    }
+
+    public void Insert_newnationality(String newnationality){
+        this.nationality = newnationality;
+    }
+
+    public void Insert_newphone_number(String newphone_number){
+        this.phone_number = newphone_number;
+    }
+
     public String Get_Data(){
         String s = "Name: " + name + "\nLast name: " + last_name + "\nAddress: " + address + "\nBirthday: " + birth_date + "\nNationality: " + nationality + "\nPhone number: " + phone_number;
         return s;
     }
-
-    public void Insert_Bio(){
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Enter Bio: ");
-
-        String bio1 = myObj.nextLine();
-        
-        System.out.println("Do you want it to be public?\nYES: Press 1\tNO: Press 2");
-        int choice = myObj.nextInt();
-        boolean istrue;
-        switch(choice){
-            case 1:
-                istrue = true;
-            case 2:
-                istrue = false;
-            default:
-                istrue = false;
-        }
-
-        Biography bio = new Biography(bio1, istrue);
-        System.out.println(bio.getBio());
-        System.out.println(bio.getis_Public());
-    }
 }
 
 class Employer_user extends User{
+
+    public Employer_user(){
+        super();
+    }
 
     public Employer_user(String username, String password, String email, String profile_category) {
         super(username, password, email, profile_category);

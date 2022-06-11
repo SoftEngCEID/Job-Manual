@@ -7,14 +7,16 @@ public class Biography {
         this.is_public = is_public;
     }
 
+    //Setters
     public void setBio(String Bio) {
         this.Bio = Bio;
     }
 
-    public void is_public() {
-        this.is_public = true;
+    public void setis_public(Boolean is_public) {
+        this.is_public = is_public;
     }
 
+    //Getters
     public String getBio() {
         return Bio;
     }
