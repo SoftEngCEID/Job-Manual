@@ -51,11 +51,27 @@ public class ucmain {
                         }
                         break;
                     case 2:
-                        System.out.println("Choose your job you want to edit");
+
                         HashMap<String, String> jobslist = new HashMap<String, String>();
                         jobs job2 = new jobs("Software Engineer Position", "HI, we looking for a java developer ");
-                        jobslist.put("Software Engineer Position", "HI, we looking for a java developer ");
-                        System.out.println(jobslist);
+                        jobslist.put("Software Engineer Position", "HI,we looking or a java  developer\n");
+                        jobslist.put("Barista", "HI,we looking  for a barista\n");
+                        // System.out.println(jobslist);
+                        jobslist.forEach((key, value) -> System.out.println(key + ":\n" + value));
+                        Scanner updatejob = new Scanner(System.in);
+                        System.out.println("Choose your job-title you want to edit:");
+                        String choosejobtitle = updatejob.nextLine();
+
+                        Scanner updatejobdescr = new Scanner(System.in);
+                        System.out.println("Please Edit your job:");
+                        String choosejobdescr = updatejobdescr.nextLine();
+                        jobslist.put(choosejobtitle, choosejobdescr);
+                        // jobslist.forEach((key, value) -> System.out.println(key + "\n" + value));
+                        String value = jobslist.get(choosejobtitle);
+                        System.out.println(alue);  
+                        jobs job3 = new jobs(choosejobtitle, choosejobdescr);
+                        job3.setJob_title(choosejobtitle);
+                        job3.setDescription(choosejobdescr);
 
                         break;
                     case 3:
