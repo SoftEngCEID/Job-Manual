@@ -68,7 +68,7 @@ public class ucmain {
                         jobslist.put(choosejobtitle, choosejobdescr);
                         // jobslist.forEach((key, value) -> System.out.println(key + "\n" + value));
                         String value = jobslist.get(choosejobtitle);
-                        System.out.println(alue);  
+                        System.out.println(value);
                         jobs job3 = new jobs(choosejobtitle, choosejobdescr);
                         job3.setJob_title(choosejobtitle);
                         job3.setDescription(choosejobdescr);
