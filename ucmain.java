@@ -56,8 +56,8 @@ public class ucmain {
                         jobs job2 = new jobs("Software Engineer Position", "HI, we looking for a java developer ");
                         jobslist.put("Software Engineer Position", "HI,we looking or a java  developer\n");
                         jobslist.put("Barista", "HI,we looking  for a barista\n");
-                        // System.out.println(jobslist);
-                        jobslist.forEach((key, value) -> System.out.println(key + ":\n" + value));
+                        // System.out.println(jobs_list);
+                        jobslist.forEach((key, value) -> System.out.println(key + "\n" + value));
                         Scanner updatejob = new Scanner(System.in);
                         System.out.println("Choose your job-title you want to edit:");
                         String choosejobtitle = updatejob.nextLine();
@@ -66,7 +66,7 @@ public class ucmain {
                         System.out.println("Please Edit your job:");
                         String choosejobdescr = updatejobdescr.nextLine();
                         jobslist.put(choosejobtitle, choosejobdescr);
-                        // jobslist.forEach((key, value) -> System.out.println(key + "\n" + value));
+                        jobslist.forEach((key, value) -> System.out.println(key + "\n" + value));
                         String value = jobslist.get(choosejobtitle);
                         System.out.println(value);
                         jobs job3 = new jobs(choosejobtitle, choosejobdescr);
@@ -75,15 +75,16 @@ public class ucmain {
 
                         break;
                     case 3:
-
+                      
+                    
+                        
                         break;
-                }
-
-                break;
-            case 2:
-                break;
-
-        }
-
+                        
+                        
+                      
+                    }            
+                         
     }
+
+}
 }
